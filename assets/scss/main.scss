@@ -1,0 +1,78 @@
+@import "@/assets/scss/variables.scss";
+
+body {
+	background-color: $default-white;
+	color: $default-dark;
+	font-family: "Montserrat", sans-serif;
+	width: 100%;
+}
+
+h1,
+h2,
+h3 {}
+
+.wrap-inner {
+	min-height: 100vh;
+	@apply flex flex-col justify-between;
+
+	.mobile-menu-open & {
+		main {
+			opacity: 0.2;
+		}
+	}
+}
+
+.button-container {
+
+
+	border-radius: 5px;
+	color: $default-white;
+	font-weight: 500;
+	text-align: center;
+	white-space: nowrap;
+	transform: translateY(0);
+	transition: all .5s;
+	opacity: 0.8;
+	background-image: linear-gradient (45deg, $light-purple, $medium-purple);
+
+
+	&.hollow {
+		position: relative;
+		opacity: 0.8;
+
+		background-image: linear-gradient($default-white, $default-white), linear-gradient(45deg, $medium-purple, $dark-purple);
+		color: $default-dark;
+		border: 2px solid transparent;
+		background-origin: border-box;
+		background-clip: content-box, border-box;
+
+		&:hover {
+			background-image: linear-gradient(45deg, $medium-purple, $dark-purple);
+			color: $default-white;
+			border: 2px solid $dark-purple;
+
+		}
+
+	}
+
+	&:hover {
+		transform: translateY(-12px);
+		opacity: 1;
+		box-shadow: 10px 10px 20px -4px rgba($default-dark, .4);
+	}
+
+	a {
+		padding: 10px;
+	}
+}
+.mobile-menu{
+	position: fixed;
+	border-radius: 12px 0 0 12px;
+	height: 100%;
+	right: 0;
+	transform: translateX(100%);
+	transition: transform .5s cubic-bezier (.76, -0.01, 0.3, .99);
+	a{
+		color: $default-dark;
+	}
+}

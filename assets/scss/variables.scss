@@ -1,0 +1,26 @@
+$default-white: #F4F4F4;
+$default-dark: #301F40;
+
+$extra-light-purple: #ECE4FB;
+$light-purple: #DDCDEA;
+$medium-purple: #B295DA;
+$dark-purple: #7F4EC3;
+
+$light-peach: #FFF4F0;
+$orange: #FF7442;
+
+
+//linear-gradients
+$linear-gradient-1: linear-gradient(149.25deg, $default-white , $light-peach, $extra-light-purple, $light-purple, $medium-purple);
+$linear-gradient-2: linear-gradient (45deg, $light-purple, $medium-purple);
+$linear-gradient-3: linear-gradient (45deg, $medium-purple, $dark-purple);
+
+
+
+//MEDIA QUERIES
+
+$break-small: 500px;
+$break-med: 768px;
+$break-large-tablet: 1024px;
+$break-large: 1200px;
+$break-xlarge: 1600px;
